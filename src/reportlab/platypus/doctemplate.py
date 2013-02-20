@@ -475,7 +475,8 @@ class BaseDocTemplate:
                 self.canvasType = "NumberedCanvas" 
             else:
                 self.canvasType = "Canvas"
-        
+        else:
+            self.canvasType = "Canvas"
         p = self.pageTemplates
         self.pageTemplates = []
         self.addPageTemplates(p)
