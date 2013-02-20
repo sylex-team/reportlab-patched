@@ -477,6 +477,8 @@ class BaseDocTemplate:
                 self.canvasType = "Canvas"
         else:
             self.canvasType = "Canvas"
+        print "REPORTLAB-PATCHED"
+        print self.canvasType
         p = self.pageTemplates
         self.pageTemplates = []
         self.addPageTemplates(p)
@@ -832,7 +834,7 @@ class BaseDocTemplate:
         self.seq = reportlab.lib.sequencer.Sequencer()
 
         #self.canv = canvasmaker(filename or self.filename,
-        if self.canvasType == "NumberedCanvas" or canvasmaker == canvas.NumberedCanvas:
+        if self.canvasType == "NumberedCanvas":
             self.canv = canvas.NumberedCanvas(filename or self.filename,
                                 pagesize=self.pagesize,
                                 invariant=self.invariant,
