@@ -477,8 +477,6 @@ class BaseDocTemplate:
                 self.canvasType = "Canvas"
         else:
             self.canvasType = "Canvas"
-        print "REPORTLAB-PATCHED"
-        print self.canvasType
         p = self.pageTemplates
         self.pageTemplates = []
         self.addPageTemplates(p)
